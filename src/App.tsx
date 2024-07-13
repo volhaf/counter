@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <Counter />
+        <Counter />
     </div>
   );
 }
@@ -19,13 +20,31 @@ type CounterPropsType = {
 
 function Counter ({}:CounterPropsType): any {
   return (
-      <div>
-        <h3>{}</h3>
+      <div className={'counter'}>
         {'number'}
-        <div>
-          <button>inc</button>
-          <button>reset</button>
+        <div className={'button_conteiner'}>
+          <Button
+              onClick={()=>{}}
+              title={'inc'}/>
+            <Button
+                onClick={()=>{}}
+                title={'reset'}/>
         </div>
 
       </div>
   )}
+
+
+
+
+type ButtonPropsType = {
+    onClick: ()=> void
+    title: string
+}
+function Button ({onClick, title}:ButtonPropsType): any {
+    return (
+        <div>
+            <button onClick={onClick}>{title}</button>
+        </div>
+    )
+}
