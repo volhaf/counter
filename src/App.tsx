@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <Counter />
-        <Counter />
     </div>
   );
 }
@@ -40,11 +39,16 @@ function Counter ({}:CounterPropsType): any {
 type ButtonPropsType = {
     onClick: ()=> void
     title: string
+    disabled?: boolean
 }
-function Button ({onClick, title}:ButtonPropsType): any {
+function Button ({onClick, title, disabled}:ButtonPropsType): any {
     return (
         <div>
-            <button onClick={onClick}>{title}</button>
+            <button
+                onClick={onClick}>
+                disabled={disabled}
+                {title}
+            </button>
         </div>
     )
 }
