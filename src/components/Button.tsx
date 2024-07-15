@@ -3,19 +3,19 @@ import React from "react";
 type ButtonPropsType = {
     onClick: ()=> void
     title: string
-    disabled?: boolean
-    style?: any
-
+    disabled: boolean
+    buttonColor: any
 }
 
 
-export function Button ({onClick, title, disabled, style}:ButtonPropsType): any {
+export function Button ({onClick, title, disabled, buttonColor}:ButtonPropsType): any {
     return (
         <div>
             <button
                 onClick={onClick}
-                disabled = {disabled}
-                style={style}
+                disabled={disabled}
+                className={buttonColor}
+
             >{title}</button>
         </div>
     )

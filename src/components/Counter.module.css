@@ -12,9 +12,6 @@
 
 }
 
-
-
-
 .number {
     width: 250px;
     display: flex;
@@ -57,6 +54,29 @@
     padding: 40px 0;
 
 
+
 }
 
+.onActiveButton {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(241, 212, 247, 0.2);
+    border-radius: 20px;
+    width: 90px;
+    padding: 5px;
+    color: rgb(241, 212, 247);
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
+.offActiveButton {
+    background-color: rgba(255, 255, 255);
+    border: 1px solid rgb(241, 212, 247, 0.2);
+    border-radius: 20px;
+    width: 90px;
+    padding: 5px;
+    color: rgb(241, 212, 247);
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+}

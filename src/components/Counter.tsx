@@ -12,17 +12,22 @@ type CounterPropsType = {
 
 export function Counter ({}:CounterPropsType): any {
     let [count, setCount] = useState(0);
+    let[color, setColor] = useState(false);
 
         const incClickHandler = () => {
             if (count <= 5) {
-                return setCount(count + 1 )
+                return setCount(count + 1 );
+                setColor(!color);
             }}
 
             const resetClickHandler = () => {
                 setCount(0)
+                setColor(!color)
             }
 
-
+// const buttonColorHandler = () => {
+//     setColor(!color)
+// }
 
 
             return (
@@ -32,12 +37,18 @@ export function Counter ({}:CounterPropsType): any {
                         <Button
                             onClick={incClickHandler}
                             title={'inc'}
-                            disabled={count === 5}
+                            disabled={count === 5 }
+                            buttonColor={color ? s.onActiveButton : s.offActiveButton}
                         />
                         <Button
                             onClick={resetClickHandler}
                             title={'reset'}
                             disabled={count === 0}
+                            buttonColor={color ?  s.offActiveButton :s.onActiveButton}
+
+
+
+
                         />
                     </div>
                 </div>
