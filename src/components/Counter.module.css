@@ -4,35 +4,59 @@
     flex-direction: column;
     margin: auto auto;
     border: 3px solid rgb(241, 212, 247);
-    border-radius: 10px;
-    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    height: 200px;
+    padding: 40px 0;
+    gap: 20px
+
 }
 
+
+
+
 .number {
+    width: 250px;
     display: flex;
     margin: 0 auto;
-    padding: 0 20px 20px;
+    border: 3px solid rgb(241, 212, 247);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
     font-size:40px;
     font-weight: bold;
     color: rgb(241, 212, 247);
-    border: 3px solid rgb(241, 212, 247);
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
-
-
-
-.button_conteiner {
-    display: flex;
-    border: 3px solid rgb(241, 212, 247);
-    border-radius: 10px;
-    padding: 20px 60px
-}
-
 
 .max {
-    font-size: 50px;
+    width: 250px;
+    display: flex;
+    margin: 0 auto;
+    border: 3px solid rgb(241, 212, 247);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    font-size:50px;
     font-weight: bold;
     color: rgb(216, 82, 100);
-    margin: 0 auto;
-    padding: 0 20px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
+
+.button_conteiner {
+    width: 250px;
+    display: flex;
+    border: 3px solid rgb(241, 212, 247);
+    border-radius: 20px;
+    margin: 0 auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+
+
+}
+
+
