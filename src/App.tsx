@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './App.css';
 
@@ -18,16 +18,23 @@ type CounterPropsType = {
 }
 
 function Counter ({}:CounterPropsType): any {
+    let[count, setCount] = useState(0);
+
+
+
   return (
       <div className={'counter'}>
-        {'number'}
+        <div>{count}</div>
         <div className={'button_conteiner'}>
           <Button
               onClick={()=>{}}
-              title={'inc'}/>
+              title={'inc'}
+              disabled={count===5}
+          />
             <Button
                 onClick={()=>{}}
-                title={'reset'}/>
+                title={'reset'}
+                disabled={count===0}/>
         </div>
 
       </div>
@@ -46,7 +53,7 @@ function Button ({onClick, title, disabled}:ButtonPropsType): any {
         <div>
             <button
                 onClick={onClick}>
-                disabled={disabled}
+                {disabled}
                 {title}
             </button>
         </div>
