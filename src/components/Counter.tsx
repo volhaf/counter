@@ -1,24 +1,34 @@
 import React, {useState} from "react";
 import {Button} from "./Button";
+import s from './Counter.module.css'
 
 type CounterPropsType = {
 
 }
 
+
+
+
+
 export function Counter ({}:CounterPropsType): any {
     let [count, setCount] = useState(0);
 
         const incClickHandler = () => {
-            if (count < 5) setCount(count + 1)
-            }
-        const resetClickHandler = () => {
-            setCount(0)
-        }
+            if (count <= 5) {
+                return setCount(count + 1 )
+            }}
 
-        return (
-            <div className={'counter'}>
-                <div className={'number'}>{count}</div>
-                    <div className={'button_conteiner'}>
+            const resetClickHandler = () => {
+                setCount(0)
+            }
+
+
+
+
+            return (
+                <div className={s.counter}>
+                    <div className={count === 5 ? s.max : s.number}>{count}</div>
+                    <div className={s.button_conteiner}>
                         <Button
                             onClick={incClickHandler}
                             title={'inc'}
@@ -27,8 +37,9 @@ export function Counter ({}:CounterPropsType): any {
                         <Button
                             onClick={resetClickHandler}
                             title={'reset'}
-                            disabled={count === 0}/>
+                            disabled={count === 0}
+                        />
                     </div>
-            </div>
-        )
-    }
+                </div>
+            )
+        }
