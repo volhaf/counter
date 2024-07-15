@@ -19,15 +19,23 @@ type CounterPropsType = {
 
 function Counter ({}:CounterPropsType): any {
     let[count, setCount] = useState(0);
+    let[on, setOn] = useState(false);
+
+    const incClickHandler = () => {
+        if (count <5 ) {
+            setCount (count +1)
+            setOn(true)
+        }
+    }
 
 
 
-  return (
+    return (
       <div className={'counter'}>
         <div>{count}</div>
         <div className={'button_conteiner'}>
           <Button
-              onClick={()=>{}}
+              onClick={incClickHandler}
               title={'inc'}
               disabled={count===5}
           />
