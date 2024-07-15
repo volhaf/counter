@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import './App.css';
+import {Button} from "./components/Button";
 
 function App() {
   return (
@@ -54,19 +55,3 @@ function Counter ({}:CounterPropsType): any {
 
 }
 
-
-type ButtonPropsType = {
-    onClick: ()=> void
-    title: string
-    disabled?: boolean
-}
-function Button ({onClick, title, disabled}:ButtonPropsType): any {
-    return (
-        <div>
-            <button
-                onClick={onClick}
-                disabled = {disabled}
-            >{title}</button>
-        </div>
-    )
-}
