@@ -1,1 +1,1 @@
-Deployment [link] (https://volhaf.github.io/counter/)
+[Deployment link](https://volhaf.github.io/counter/)
