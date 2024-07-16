@@ -4,7 +4,7 @@ type ButtonPropsType = {
     onClick: ()=> void
     title: string
     disabled: boolean
-    buttonColor: any
+    buttonColor: string
 }
 
 
