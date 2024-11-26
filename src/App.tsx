@@ -11,12 +11,25 @@ function App() {
   setValue(value+1)
  }
 
+ const setLocalStorageHandler =() => {
+localStorage.setItem('counterKey', value.toString())
+ }
+
+
+ const getFromLocalStorageHandler =() => {
+  // code
+   }
+  
+
+
   return (
     <div className="App">
       {/* <Counter/> */}
       <div className="Conteiner">
       <h1>{value}</h1>
       <button onClick={incHandler}> inc</button>
+      <button onClick={setLocalStorageHandler}> setLocalStorage</button>
+      <button onClick={getFromLocalStorageHandler}> getFromLocalStorage</button>
       </div>
       
     </div>
