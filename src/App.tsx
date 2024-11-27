@@ -17,7 +17,12 @@ localStorage.setItem('counterKey', value.toString())
 
 
  const getFromLocalStorageHandler =() => {
-  // code
+  let valueAsString = localStorage.getItem('counterKey')
+  if (valueAsString) {
+    let newValue = JSON.parse(valueAsString)
+    setValue(newValue)
+  }
+ 
    }
   
 
